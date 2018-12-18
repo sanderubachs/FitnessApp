@@ -42,6 +42,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                     let postNaam = postObject?["postNaam"]
                     let postNiveau = postObject?["postNiveau"]
                     let postAfstand = postObject?["postAfstand"]
+                    let postTitle = postObject? ["postAfstand"]
 //                    let postProfile = postObject?["postProfile"]
                     
                     //                    let post = Post(id: postId as! String?, onderwerp: postNaam as! String?, naam: postOnderwerp as! String?, beschrijving: postBeschrijving as! String?, datum: postDatum as! String?, taal: postTaal as! String?)
@@ -51,16 +52,14 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                     self.niveauData.append(postNiveau as! String)
                     self.naamData.append(postNaam as! String)
                     self.afstandData.append(postAfstand as! String)
+                    
+                    //titleSet
+//                    self.title = postTitle as! String
 //                    self.profileData.append(postProfile as! String)
                 }
                 self.tableView.reloadData()
             }
         })
-        
-        
-        let title = "hallo"
-        self.title = title
-
     }
     
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
