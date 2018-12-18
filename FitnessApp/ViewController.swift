@@ -53,6 +53,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                     let postNiveau = postObject?["userNiveau"]
                     let postLeeftijd = postObject?["userLeeftijd"]
                     let postBeschrijving = postObject? ["userBeschrijving"]
+                    let postAfstand = postObject? ["userAfstand"]
                     //                    let postProfile = postObject?["postProfile"]
                     
                     self.niveauData.append(postNiveau as! String)
@@ -60,20 +61,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                     self.achterData.append(postAchter as! String)
                     self.leeftijdData.append(postLeeftijd as! String)
                     self.beschrijvingData.append(postBeschrijving as! String)
-                    
-                    
-//                    self.afstandData.append(postAfstand as! String)
-                    
-//                    let postNaam = postObject?["postNaam"]
-//                    let postNiveau = postObject?["postNiveau"]
-//                    let postAfstand = postObject?["postAfstand"]
-//                    let postTitle = postObject? ["postAfstand"]
-////                    let postProfile = postObject?["postProfile"]
-//
-//                    self.niveauData.append(postNiveau as! String)
-//                    self.naamData.append(postNaam as! String)
-//                    self.afstandData.append(postAfstand as! String)
-                    
+                    self.afstandData.append(postAfstand as! String)
                 }
                 self.tableView.reloadData()
             }
@@ -92,12 +80,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! TableViewCell
-//        let naamOutput = "\(naamData[indexPath.row]) \(leeftijdData[indexPath.row])"
-//        cell.lblNaam.text = naamData[indexPath.row]
-        cell.lblNaam.text = "\(naamData[indexPath.row]) (\(leeftijdData[indexPath.row]))"
-        cell.lblNiveau.text = achterData[indexPath.row]
-//        cell.lblAfstand.text = afstandData[indexPath.row]
-        cell.lblAfstand.text = niveauData[indexPath.row]
+        cell.lblNaam.text = "\(naamData[indexPath.row]), \(leeftijdData[indexPath.row])"
+        cell.lblNiveau.text = "Niveau: \(niveauData[indexPath.row])"
+        cell.lblAfstand.text = afstandData[indexPath.row]
         cell.imageProfile.image = UIImage(named: "apple-class-conference-7102.png")
         
         return cell
@@ -105,11 +90,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let vc = DetailVC()
-        //        vc.commonInit(postData[indexPath.item])
-        vc.commonInit2(naam: naamData[indexPath.item],
-                       niveau: niveauData[indexPath.item],
-//                       afstand: afstandData[indexPath.item]
-                       afstand: leeftijdData[indexPath.item]
+                vc.commonInit("\(naamData[indexPath.item]) \(achterData[indexPath.item])")
+        vc.dataCommonInit(naam: "\(naamData[indexPath.item]) \(achterData[indexPath.item])",
+                       niveau: "Niveau: \(niveauData[indexPath.row])",
+                       afstand: afstandData[indexPath.item],
+                       beschrijving: beschrijvingData[indexPath.item]
         )
         
         self.navigationController?.pushViewController(vc, animated: true)

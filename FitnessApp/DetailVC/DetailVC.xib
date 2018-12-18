@@ -13,6 +13,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DetailVC" customModule="FitnessApp" customModuleProvider="target">
             <connections>
                 <outlet property="afstandLabel" destination="8JN-pX-RSZ" id="05d-Sw-xSN"/>
+                <outlet property="beschrijvingLabel" destination="dOc-sQ-NeE" id="ksN-nI-k8X"/>
                 <outlet property="naamLabel" destination="jlR-SH-xCA" id="JL6-2F-FvR"/>
                 <outlet property="niveauLabel" destination="cL1-yU-NSp" id="4wt-ao-gQh"/>
                 <outlet property="reactieInput" destination="ajh-6u-6Hk" id="b8L-Vu-vvd"/>
@@ -79,9 +80,17 @@
                         <navigationItem title="Title" id="46I-fe-ZER"/>
                     </items>
                 </navigationBar>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dOc-sQ-NeE">
+                    <rect key="frame" x="8" y="281" width="351" height="156"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="138.40000000000001" y="146.17691154422789"/>
         </view>
     </objects>
     <resources>

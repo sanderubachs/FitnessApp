@@ -13,6 +13,7 @@ class DetailVC: UIViewController {
     @IBOutlet weak var afstandLabel: UILabel!
     @IBOutlet weak var naamLabel: UILabel!
     @IBOutlet weak var niveauLabel: UILabel!
+    @IBOutlet weak var beschrijvingLabel: UILabel!
     
     @IBOutlet weak var reactieLabel: UILabel!
     @IBOutlet weak var reactieInput: UITextField!
@@ -25,6 +26,7 @@ class DetailVC: UIViewController {
     var naamVar = String()
     var niveauVar = String()
     var afstandVar = String()
+    var beschrijvingVar = String()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,16 +34,20 @@ class DetailVC: UIViewController {
         naamLabel.text = naamVar
         niveauLabel.text = niveauVar
         afstandLabel.text = afstandVar
+        beschrijvingLabel.text = beschrijvingVar
+        
+        [beschrijvingLabel .sizeToFit()]
     }
     
     func commonInit(_ title: String) {
         self.title = title
     }
     
-    func commonInit2(naam: String, niveau: String, afstand: String) {
+    func dataCommonInit(naam: String, niveau: String, afstand: String, beschrijving: String) {
         naamVar = naam
         niveauVar = niveau
         afstandVar = afstand
+        beschrijvingVar = beschrijving
     }
 }
 
