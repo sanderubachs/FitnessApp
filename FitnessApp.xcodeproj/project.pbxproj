@@ -20,6 +20,8 @@
 		8313364121C7A5D500ED399E /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8313364021C7A5D500ED399E /* Post.swift */; };
 		8313364921C7B9F400ED399E /* DetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8313364721C7B9F400ED399E /* DetailVC.swift */; };
 		8313364A21C7B9F400ED399E /* DetailVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8313364821C7B9F400ED399E /* DetailVC.xib */; };
+		834FD22221C9044400824738 /* loginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834FD22121C9044400824738 /* loginViewController.swift */; };
+		834FD22421C90A8000824738 /* registerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834FD22321C90A8000824738 /* registerViewController.swift */; };
 		BFF74C6F1EEF31CD8A5EBECF /* Pods_FitnessAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27B00E49AAB6282EB6DAB0D4 /* Pods_FitnessAppUITests.framework */; };
 		E8100BD3232E08C08453AF55 /* Pods_FitnessAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB00906D82DC2C83864C6BB1 /* Pods_FitnessAppTests.framework */; };
 		E9AED2D492408062079269C3 /* Pods_FitnessApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7C1E2A4D4E8A59990BB46DF /* Pods_FitnessApp.framework */; };
@@ -67,6 +69,8 @@
 		8313364021C7A5D500ED399E /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		8313364721C7B9F400ED399E /* DetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailVC.swift; sourceTree = "<group>"; };
 		8313364821C7B9F400ED399E /* DetailVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailVC.xib; sourceTree = "<group>"; };
+		834FD22121C9044400824738 /* loginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = loginViewController.swift; sourceTree = "<group>"; };
+		834FD22321C90A8000824738 /* registerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = registerViewController.swift; sourceTree = "<group>"; };
 		A4996542C84E2B3D93669BDF /* Pods-FitnessAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FitnessAppUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FitnessAppUITests/Pods-FitnessAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		AC48B16F62ADDA1AE6370EA9 /* Pods-FitnessAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FitnessAppTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FitnessAppTests/Pods-FitnessAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B7C1E2A4D4E8A59990BB46DF /* Pods_FitnessApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FitnessApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -131,6 +135,8 @@
 				8313360E21C7973400ED399E /* ViewController.swift */,
 				8313363C21C79BC700ED399E /* TableViewCell.swift */,
 				8313363E21C79E5B00ED399E /* ComposeViewController.swift */,
+				834FD22121C9044400824738 /* loginViewController.swift */,
+				834FD22321C90A8000824738 /* registerViewController.swift */,
 				8313364021C7A5D500ED399E /* Post.swift */,
 				8313361021C7973400ED399E /* Main.storyboard */,
 				8313361321C7973600ED399E /* Assets.xcassets */,
@@ -399,6 +405,7 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-FitnessApp/Pods-FitnessApp-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
@@ -407,6 +414,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
@@ -423,8 +431,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				834FD22221C9044400824738 /* loginViewController.swift in Sources */,
 				8313360F21C7973400ED399E /* ViewController.swift in Sources */,
 				8313363D21C79BC700ED399E /* TableViewCell.swift in Sources */,
+				834FD22421C90A8000824738 /* registerViewController.swift in Sources */,
 				8313360D21C7973400ED399E /* AppDelegate.swift in Sources */,
 				8313363F21C79E5B00ED399E /* ComposeViewController.swift in Sources */,
 				8313364121C7A5D500ED399E /* Post.swift in Sources */,
