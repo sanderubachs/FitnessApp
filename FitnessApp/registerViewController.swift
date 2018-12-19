@@ -55,7 +55,8 @@ class registerViewController: UIViewController {
                         "userNiveau": inputNiveau!,
                         "userLeeftijd": inputLeeftijd!,
                         "userBeschrijving": inputBeschrijving!,
-                        "userAfstand": "5,0km"
+                        "userAfstand": "5,0km",
+                        "userEmail": email
                         ])
                 } else {
                     return
