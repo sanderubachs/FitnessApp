@@ -71,41 +71,28 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                 }
                 self.tableView.reloadData()
                 
-                print()
-                let user = Auth.auth().currentUser
-                if let user = user {
-                    let uid = user.uid
-                    let email = user.email
-                    print("uid: \(uid)")
-                    print("email: \(email)")
-                    
-                    self.ref2 = Database.database().reference().child("Users")
-                    let query = self.ref2.queryOrdered(byChild: "userEmail").queryEqual(toValue: email)
-                    query.observe(.value, with: { (snapshot) in
-                        for user_child in (snapshot.children) {
-                            let user_snap = user_child as! DataSnapshot
-                            let dict = user_snap.value as! [String: String?]
-                            
-                            // DEFINE VARIABLES FOR LABELS
-                            let voorNaam = dict["userNaam"] as? String
-                            let achterNaam = dict["userAchternaam"] as? String
-                            print("voornaam: \(voorNaam) achternaam: \(achterNaam)")
-                        }
-                        
-                        
-//                        for childSnapshot in snapshot.children {
-                        
-//                        for childSnapshot in snapshot.children {
+//                //accountfunctie
+//                let user = Auth.auth().currentUser
+//                if let user = user {
+//                    let uid = user.uid
+//                    let email = user.email
+//                    print("uid: \(uid)")
+//                    print("email: \(email)")
 //
-//                            print(postNaam)
+//                    self.ref2 = Database.database().reference().child("Users")
+//                    let query = self.ref2.queryOrdered(byChild: "userEmail").queryEqual(toValue: email)
+//                    query.observe(.value, with: { (snapshot) in
+//                        for user_child in (snapshot.children) {
+//                            let user_snap = user_child as! DataSnapshot
+//                            let dict = user_snap.value as! [String: String?]
 //
-//                            print(childSnapshot)
-//                            print("yeah bitchie")
-////                            let achternaam = ""
-//                            print()
+//                            // DEFINE VARIABLES FOR LABELS
+//                            let voorNaam = dict["userNaam"] as? String
+//                            let achterNaam = dict["userAchternaam"] as? String
+//                            print("voornaam: \(voorNaam) achternaam: \(achterNaam)")
 //                        }
-                    })
-                }
+//                    })
+//                }
             }
         })
     }

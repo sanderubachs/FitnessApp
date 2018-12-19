@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		830E6E4721CA778300BB4DF7 /* accountVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 830E6E4621CA778300BB4DF7 /* accountVC.swift */; };
 		8313360D21C7973400ED399E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8313360C21C7973400ED399E /* AppDelegate.swift */; };
 		8313360F21C7973400ED399E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8313360E21C7973400ED399E /* ViewController.swift */; };
 		8313361221C7973400ED399E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8313361021C7973400ED399E /* Main.storyboard */; };
@@ -49,6 +50,7 @@
 		453C3EAD731F936CBAD17DCE /* Pods-FitnessApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FitnessApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FitnessApp/Pods-FitnessApp.debug.xcconfig"; sourceTree = "<group>"; };
 		4FD76BE6CF4AE2D83F4D9D2C /* Pods-FitnessApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FitnessApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-FitnessApp/Pods-FitnessApp.release.xcconfig"; sourceTree = "<group>"; };
 		7ED85A494BA697099FB32DD9 /* Pods-FitnessAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FitnessAppUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FitnessAppUITests/Pods-FitnessAppUITests.release.xcconfig"; sourceTree = "<group>"; };
+		830E6E4621CA778300BB4DF7 /* accountVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = accountVC.swift; sourceTree = "<group>"; };
 		8313360921C7973400ED399E /* FitnessApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FitnessApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8313360C21C7973400ED399E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8313360E21C7973400ED399E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -134,10 +136,11 @@
 				8313363C21C79BC700ED399E /* TableViewCell.swift */,
 				834FD22121C9044400824738 /* loginViewController.swift */,
 				834FD22321C90A8000824738 /* registerViewController.swift */,
-				8313364021C7A5D500ED399E /* Post.swift */,
+				830E6E4621CA778300BB4DF7 /* accountVC.swift */,
 				8313361021C7973400ED399E /* Main.storyboard */,
 				8313361321C7973600ED399E /* Assets.xcassets */,
 				8313361521C7973600ED399E /* LaunchScreen.storyboard */,
+				8313364021C7A5D500ED399E /* Post.swift */,
 				8313361821C7973600ED399E /* Info.plist */,
 				8313363A21C7984000ED399E /* GoogleService-Info.plist */,
 			);
@@ -428,6 +431,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				830E6E4721CA778300BB4DF7 /* accountVC.swift in Sources */,
 				834FD22221C9044400824738 /* loginViewController.swift in Sources */,
 				8313360F21C7973400ED399E /* ViewController.swift in Sources */,
 				8313363D21C79BC700ED399E /* TableViewCell.swift in Sources */,
