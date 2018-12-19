@@ -75,17 +75,13 @@ class accountVC: UIViewController {
                 for user_child in (snapshot.children) {
                     let snap = user_child as! DataSnapshot
                     let key = snap.key
-                    let value = snap.value
-                    print("key = \(key)  value = \(value!)")
+//                    let value = snap.value //value = inhoud van die tabel onder ID
                     
-                    print("userchild: \(user_child)")
-//                    var userID = user_child.key
-//                    print(userID)
-//                    let user_snap = user_child as! DataSnapshot
-//                    let dict = user_snap.value as! [String: String?]
+                    print("key = \(key)")
                     
+//                    print("userchild: \(user_child)")
                 
-//                    self.ref.child("Users/\(useruid)/userBeschrijving").setValue(inputBeschrijving)
+                    self.ref.child("Users/\(key)/userBeschrijving").setValue(inputBeschrijving)
                 }
             })
         }
