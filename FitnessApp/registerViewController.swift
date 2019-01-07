@@ -48,6 +48,8 @@ class registerViewController: UIViewController {
                     let inputLeeftijd = self.leeftijdInput.text
                     let inputBeschrijving = self.beschrijvingInput.text
                     
+                    let afstand = "afstand"
+                    
                     //input in database zetten
                     self.ref?.child("Users").childByAutoId().setValue([
                         "userNaam": inputNaam!,
