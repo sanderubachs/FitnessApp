@@ -17,8 +17,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     var ref: DatabaseReference!
     var ref2: DatabaseReference!
     
-    var postData = [Post]()
-    
     var niveauData = [String]()
     var naamData = [String]()
     var achterData = [String]()
@@ -39,7 +37,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         ref = Database.database().reference().child("Users")
         ref.observe(DataEventType.value, with: { (snapshot) in
             if snapshot.childrenCount>0{
-                //                self.postData.removeAll()
                 self.naamData.removeAll()
                 self.achterData.removeAll()
                 self.niveauData.removeAll()
@@ -61,44 +58,32 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                     let postEmail = postObject?["userEmail"]
                     //                    let postProfile = postObject?["postProfile"]
                     
-                    self.niveauData.append(postNiveau as! String)
-                    self.naamData.append(postNaam as! String)
-                    self.achterData.append(postAchter as! String)
-                    self.leeftijdData.append(postLeeftijd as! String)
-                    self.beschrijvingData.append(postBeschrijving as! String)
-                    self.afstandData.append(postAfstand as! String)
-                    self.emailData.append(postEmail as! String)
+                    //if currentuser = naamData : niet toevoegen
+                    let user = Auth.auth().currentUser
+                    if let user = user {
+                        let uid = user.uid
+                        var email = user.email
+                        
+                        //voorkom dat eigen account wordt weergegeven in lijst
+                        if (email == (postEmail as! String)) {
+                            print("email-yes: \(self.emailData)")
+                        } else {                            
+                            self.niveauData.append(postNiveau as! String)
+                            self.naamData.append(postNaam as! String)
+                            self.achterData.append(postAchter as! String)
+                            self.leeftijdData.append(postLeeftijd as! String)
+                            self.beschrijvingData.append(postBeschrijving as! String)
+                            self.afstandData.append(postAfstand as! String)
+                            self.emailData.append(postEmail as! String)
+                        }
+                    }
                 }
                 self.tableView.reloadData()
-                
-//                //accountfunctie
-//                let user = Auth.auth().currentUser
-//                if let user = user {
-//                    let uid = user.uid
-//                    let email = user.email
-//                    print("uid: \(uid)")
-//                    print("email: \(email)")
-//
-//                    self.ref2 = Database.database().reference().child("Users")
-//                    let query = self.ref2.queryOrdered(byChild: "userEmail").queryEqual(toValue: email)
-//                    query.observe(.value, with: { (snapshot) in
-//                        for user_child in (snapshot.children) {
-//                            let user_snap = user_child as! DataSnapshot
-//                            let dict = user_snap.value as! [String: String?]
-//
-//                            // DEFINE VARIABLES FOR LABELS
-//                            let voorNaam = dict["userNaam"] as? String
-//                            let achterNaam = dict["userAchternaam"] as? String
-//                            print("voornaam: \(voorNaam) achternaam: \(achterNaam)")
-//                        }
-//                    })
-//                }
             }
         })
     }
     
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        //        return postData.count
         return naamData.count
     }
     

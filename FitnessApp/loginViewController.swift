@@ -28,8 +28,6 @@ class loginViewController: UIViewController {
     @IBAction func signInButtonTapped(_ sender: Any) {
         //email validation
         if let email = emailInput.text, let pass = passwordInput.text{
-
-            //check if it's sign in or register
                 //sign in the user
                 Auth.auth().signIn(withEmail: email, password: pass) { (user, error) in
 

@@ -32,7 +32,7 @@ class accountVC: UIViewController {
             let uid = user.uid
             let email = user.email
             print("uid: \(uid)")
-            print("email: \(email)")
+            print("email: \(email!)")
             
             self.ref2 = Database.database().reference().child("Users")
             let query = self.ref2.queryOrdered(byChild: "userEmail").queryEqual(toValue: email)
@@ -40,9 +40,6 @@ class accountVC: UIViewController {
                 for user_child in (snapshot.children) {
                     let user_snap = user_child as! DataSnapshot
                     let dict = user_snap.value as! [String: String?]
-                    
-                    //hierdoor krijg je id van shit
-//                    print("userchild: \(user_child)")
                     
                     // DEFINE VARIABLES FOR LABELS
                     let voorNaam = dict["userNaam"] as? String
@@ -75,22 +72,12 @@ class accountVC: UIViewController {
                 for user_child in (snapshot.children) {
                     let snap = user_child as! DataSnapshot
                     let key = snap.key
-//                    let value = snap.value //value = inhoud van die tabel onder ID
                     
-                    print("key = \(key)")
-                    
-//                    print("userchild: \(user_child)")
-                
                     self.ref.child("Users/\(key)/userBeschrijving").setValue(inputBeschrijving)
                 }
             })
         }
-        
-        //        let user = Auth.auth().currentUser
-//        print("user-id: \(user)")
-//        self.ref.child("Users/\(user!.uid)/userBeschrijving").setValue(inputBeschrijving)
-        
-//        presentingViewController?.dismiss(animated: true, completion: nil)
+        _ = navigationController?.popViewController(animated: true)
         }
     }
 
