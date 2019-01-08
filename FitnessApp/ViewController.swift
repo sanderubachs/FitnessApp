@@ -87,9 +87,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                         var email = user.email
                         
                         //voorkom dat eigen account wordt weergegeven in lijst
-                        if (email == (postEmail as! String)) {
-                            print("email-yes: \(self.emailData)")
-                        } else {                            
+//                        if (email == (postEmail as! String)) {
+//                            print("email-yes: \(self.emailData)")
+//                        } else {
                             self.niveauData.append(postNiveau as! String)
                             self.naamData.append(postNaam as! String)
                             self.achterData.append(postAchter as! String)
@@ -97,7 +97,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                             self.beschrijvingData.append(postBeschrijving as! String)
                             self.afstandData.append(postAfstand as! String)
                             self.emailData.append(postEmail as! String)
-                        }
+//                        }
                     }
                 }
                 self.tableView.reloadData()
@@ -128,24 +128,13 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         currentUserChatId = users[indexPath.row].uid
         
         let vcChat = ChatViewController()
-        vcChat.commonInit(users[indexPath.row].username)
+        vcChat.commonInit(users[indexPath.row].username,
+                          user_uid: users[indexPath.row].uid)
         vcChat.commonInit2(naam: naamData[indexPath.item],
                            onderwerp: achterData[indexPath.item],
                            datum: niveauData[indexPath.item],
                            taal: afstandData[indexPath.item],
                            beschrijving: beschrijvingData[indexPath.item])
-        
-//        let vc = DetailVC()
-//                vc.commonInit("\(naamData[indexPath.item]) \(achterData[indexPath.item])")
-//        vc.dataCommonInit(naam: "\(naamData[indexPath.item]) \(achterData[indexPath.item])",
-//                       niveau: "Niveau: \(niveauData[indexPath.row])",
-//                       afstand: afstandData[indexPath.item],
-//                       beschrijving: beschrijvingData[indexPath.item]
-//        )
-        
-        
-//        self.navigationController?.pushViewController(vc, animated: true)
-//        self.tableView.deselectRow(at: indexPath, animated: true)
     }
 }
 

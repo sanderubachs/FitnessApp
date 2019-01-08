@@ -18,6 +18,7 @@ struct Post2 {
 }
 
 var name : String?
+var get_uid : String!
 
 var naamVar = String()
 var onderwerpVar = String()
@@ -36,6 +37,7 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
     @IBOutlet weak var taalLabel: UILabel!
     @IBOutlet weak var datumLabel: UILabel!
     
+    var ref: DatabaseReference!
     var ref2: DatabaseReference!
     
     var posts = [Post2]()
@@ -50,35 +52,53 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
         tableView.delegate = self
         tableView.dataSource = self
         
+        let uid = Auth.auth().currentUser?.uid
+        
         let database = Database.database().reference()
-        database.child("Messages").child(currentUserChatId).queryOrderedByKey().observe(.childAdded, with: {
-            snapshot in
+//        database.child("Messages").child(currentUserChatId).queryOrderedByKey().observe(.childAdded, with: {
+//        database.child("Messages").child(currentUserChatId).queryOrderedByKey().queryEqual(toValue: my_uid)
+//        query.observe(.value, with: {
+//            (snapshot) in
+        
+        
+//        self.ref = Database.database().reference().child("Messages")
+//        let query = self.ref.queryOrdered(byChild: "user-uid").queryEqual(toValue: get_uid!)
+//        query.observe(.value, with: { (snapshot) in
+//            print("my_uid: \(get_uid!)")
+//            print("uid: \(uid!)")
+        
+//        if (get_uid == uid){
+            database.child("Messages").child(currentUserChatId).queryOrderedByKey().observe(.childAdded, with: {
+                snapshot in
+                
+                let bodyText = (snapshot.value as? NSDictionary)?["bodyText"] as? String ?? ""
+                let userName = (snapshot.value as? NSDictionary)?["username"] as? String ?? ""
+                
+                self.posts.insert(Post2(bodyText: bodyText, username: userName), at: 0)
+                self.tableView.reloadData()
+            })
             
-            let bodyText = (snapshot.value as? NSDictionary)?["bodyText"] as? String ?? ""
-            let userName = (snapshot.value as? NSDictionary)?["username"] as? String ?? ""
+            tableView.reloadData()
             
-            self.posts.insert(Post2(bodyText: bodyText, username: userName), at: 0)
-            self.tableView.reloadData()
-        })
-        
-        tableView.reloadData()
-        
-        naamLabel.text = naamVar
-        onderwerpLabel.text = onderwerpVar
-        beschrijvingLabel.text = beschrijvingVar
-        taalLabel.text = taalVar
-        datumLabel.text = datumVar
-        
-        //        print("naamV: \(naamVar)")
-        //        print("onderV: \(onderwerpVar)")
-        //        print("taalV: \(taalVar)")
+            naamLabel.text = naamVar
+            onderwerpLabel.text = onderwerpVar
+            beschrijvingLabel.text = beschrijvingVar
+            taalLabel.text = taalVar
+            datumLabel.text = datumVar
+            
+            //        print("naamV: \(naamVar)")
+            //        print("onderV: \(onderwerpVar)")
+            //        print("taalV: \(taalVar)")
+
+        }
     }
     
-    func commonInit(_ title: String) {
+    func commonInit(_ title: String, user_uid: String) {
         //        navigationItem.title = "harry"
         //        self.title = title
         
         name = title
+        get_uid = user_uid
         
         print("title: \(title)")
     }
@@ -110,12 +130,14 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
                     let voornaam = dict["userNaam"] as? String
                     let achternaam = dict["userAchternaam"] as? String
                     let username = "\(voornaam!) \(achternaam!)"
+                    let useruid = get_uid
                     print(username)
                     
                     let database = Database.database().reference()
                     let bodyData : [String : Any] = ["uid" : uid!,
                                                      "bodyText" : self.messageText.text!,
-                                                     "username" : username]
+                                                     "username" : username,
+                                                     "user-uid" : useruid]
                     database.child("Messages").child(currentUserChatId).childByAutoId().setValue(bodyData)
                     
                     self.messageText.text = ""

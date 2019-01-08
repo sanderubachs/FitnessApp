@@ -507,7 +507,7 @@
                                                     <action selector="sendMessage:" destination="ynH-gT-qTB" eventType="touchUpInside" id="xwe-Ye-JXK"/>
                                                 </connections>
                                             </button>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="apple-class-conference-7102" translatesAutoresizingMaskIntoConstraints="NO" id="Be0-wP-IQ6">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="apple-class-conference-7104" translatesAutoresizingMaskIntoConstraints="NO" id="Be0-wP-IQ6">
                                                 <rect key="frame" x="0.0" y="0.0" width="375" height="178"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             </imageView>
@@ -626,7 +626,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="apple-class-conference-7102" width="5472" height="3648"/>
+        <image name="apple-class-conference-7104" width="16" height="16"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="s8h-CX-Idm"/>
