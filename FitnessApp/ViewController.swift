@@ -32,6 +32,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     var leeftijdData = [String]()
     var beschrijvingData = [String]()
     var emailData = [String]()
+    var uidData = [String]()
     
     var afstandData = [String]()
     
@@ -65,6 +66,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                 self.beschrijvingData.removeAll()
                 self.leeftijdData.removeAll()
                 self.emailData.removeAll()
+                self.uidData.removeAll()
 
 //                self.afstandData.removeAll()
                 
@@ -78,6 +80,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                     let postBeschrijving = postObject? ["userBeschrijving"]
                     let postAfstand = postObject? ["userAfstand"]
                     let postEmail = postObject?["userEmail"]
+                    let postUid = postObject?["uid"]
                     //                    let postProfile = postObject?["postProfile"]
                     
                     //if currentuser = naamData : niet toevoegen
@@ -97,6 +100,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                             self.beschrijvingData.append(postBeschrijving as! String)
                             self.afstandData.append(postAfstand as! String)
                             self.emailData.append(postEmail as! String)
+                            self.uidData.append(postUid as! String)
 //                        }
                     }
                 }
@@ -118,7 +122,14 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! TableViewCell
         cell.lblNaam.text = "\(naamData[indexPath.row]), \(leeftijdData[indexPath.row])"
         cell.lblNiveau.text = "Niveau: \(niveauData[indexPath.row])"
-        cell.lblAfstand.text = afstandData[indexPath.row]
+        
+        let uid = Auth.auth().currentUser?.uid
+        if (Auth.auth().currentUser?.uid == uidData[indexPath.row]){
+            print("hallo")
+        } else {
+            cell.lblAfstand.text = afstandData[indexPath.row]
+        }
+        
         cell.imageProfile.image = UIImage(named: "apple-class-conference-7102.png")
         
         return cell
@@ -131,9 +142,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         vcChat.commonInit(users[indexPath.row].username,
                           user_uid: users[indexPath.row].uid)
         vcChat.commonInit2(naam: naamData[indexPath.item],
+                           achternaam: achterData[indexPath.item],
                            onderwerp: achterData[indexPath.item],
-                           datum: niveauData[indexPath.item],
-                           taal: afstandData[indexPath.item],
+                           niveau: niveauData[indexPath.item],
+                           afstand: afstandData[indexPath.item],
                            beschrijving: beschrijvingData[indexPath.item])
     }
 }

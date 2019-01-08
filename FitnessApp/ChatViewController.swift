@@ -23,8 +23,8 @@ var get_uid : String!
 var naamVar = String()
 var onderwerpVar = String()
 var beschrijvingVar = String()
-var taalVar = String()
-var datumVar = String()
+var afstandVar = String()
+var niveauVar = String()
 
 class ChatViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
@@ -32,10 +32,9 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
     @IBOutlet weak var tableView: UITableView!
     
     @IBOutlet weak var naamLabel: UILabel!
-    @IBOutlet weak var onderwerpLabel: UILabel!
     @IBOutlet weak var beschrijvingLabel: UILabel!
-    @IBOutlet weak var taalLabel: UILabel!
-    @IBOutlet weak var datumLabel: UILabel!
+    @IBOutlet weak var niveauLabel: UILabel!
+    @IBOutlet weak var afstandLabel: UILabel!
     
     var ref: DatabaseReference!
     var ref2: DatabaseReference!
@@ -55,17 +54,6 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
         let uid = Auth.auth().currentUser?.uid
         
         let database = Database.database().reference()
-//        database.child("Messages").child(currentUserChatId).queryOrderedByKey().observe(.childAdded, with: {
-//        database.child("Messages").child(currentUserChatId).queryOrderedByKey().queryEqual(toValue: my_uid)
-//        query.observe(.value, with: {
-//            (snapshot) in
-        
-        
-//        self.ref = Database.database().reference().child("Messages")
-//        let query = self.ref.queryOrdered(byChild: "user-uid").queryEqual(toValue: get_uid!)
-//        query.observe(.value, with: { (snapshot) in
-//            print("my_uid: \(get_uid!)")
-//            print("uid: \(uid!)")
         
 //        if (get_uid == uid){
             database.child("Messages").child(currentUserChatId).queryOrderedByKey().observe(.childAdded, with: {
@@ -81,34 +69,26 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
             tableView.reloadData()
             
             naamLabel.text = naamVar
-            onderwerpLabel.text = onderwerpVar
             beschrijvingLabel.text = beschrijvingVar
-            taalLabel.text = taalVar
-            datumLabel.text = datumVar
-            
-            //        print("naamV: \(naamVar)")
-            //        print("onderV: \(onderwerpVar)")
-            //        print("taalV: \(taalVar)")
-
-        }
+            afstandLabel.text = afstandVar
+            niveauLabel.text = niveauVar
+        
+        [beschrijvingLabel .sizeToFit()]
     }
     
-    func commonInit(_ title: String, user_uid: String) {
-        //        navigationItem.title = "harry"
-        //        self.title = title
-        
+    func commonInit(_ title: String, user_uid: String) {        
         name = title
         get_uid = user_uid
         
         print("title: \(title)")
     }
     
-    func commonInit2(naam: String, onderwerp: String, datum: String, taal: String, beschrijving: String) {
-        naamVar = naam
+    func commonInit2(naam: String, achternaam: String, onderwerp: String, niveau: String, afstand: String, beschrijving: String) {
+        naamVar = "\(naam) \(achternaam)"
         onderwerpVar = onderwerp
-        datumVar = datum
+        niveauVar = niveau
+        afstandVar = afstand
         beschrijvingVar = beschrijving
-        taalVar = taal
         
         //        print("TAAL: \(taal)")
         //        print("NAAM: \(naam)")
@@ -136,8 +116,7 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
                     let database = Database.database().reference()
                     let bodyData : [String : Any] = ["uid" : uid!,
                                                      "bodyText" : self.messageText.text!,
-                                                     "username" : username,
-                                                     "user-uid" : useruid]
+                                                     "username" : username]
                     database.child("Messages").child(currentUserChatId).childByAutoId().setValue(bodyData)
                     
                     self.messageText.text = ""
@@ -151,7 +130,8 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 65
+//        return 65
+        return 100
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
