@@ -33,10 +33,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     var beschrijvingData = [String]()
     var emailData = [String]()
     var uidData = [String]()
-    
     var afstandData = [String]()
-    
-//    var profileData = [String]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -67,8 +64,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                 self.leeftijdData.removeAll()
                 self.emailData.removeAll()
                 self.uidData.removeAll()
-
-//                self.afstandData.removeAll()
+                self.afstandData.removeAll()
                 
                 for posts in snapshot.children.allObjects as![DataSnapshot]{
                     let postObject = posts.value as? [String: AnyObject]
@@ -81,18 +77,12 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                     let postAfstand = postObject? ["userAfstand"]
                     let postEmail = postObject?["userEmail"]
                     let postUid = postObject?["uid"]
-                    //                    let postProfile = postObject?["postProfile"]
                     
-                    //if currentuser = naamData : niet toevoegen
                     let user = Auth.auth().currentUser
                     if let user = user {
                         let uid = user.uid
                         var email = user.email
                         
-                        //voorkom dat eigen account wordt weergegeven in lijst
-//                        if (email == (postEmail as! String)) {
-//                            print("email-yes: \(self.emailData)")
-//                        } else {
                             self.niveauData.append(postNiveau as! String)
                             self.naamData.append(postNaam as! String)
                             self.achterData.append(postAchter as! String)
@@ -101,7 +91,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                             self.afstandData.append(postAfstand as! String)
                             self.emailData.append(postEmail as! String)
                             self.uidData.append(postUid as! String)
-//                        }
                     }
                 }
                 self.tableView.reloadData()
@@ -131,8 +120,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         cell.lblNiveau.text = "Niveau: \(niveauData[indexPath.row])"
         
         if (Auth.auth().currentUser?.uid == uidData[indexPath.row]){
-            print("user: \(Auth.auth().currentUser?.email)")
-//            cell.backgroundColor = .blue
             cell.backgroundColor = UIColor(red: 0.5, green: 0.5, blue: 0.5, alpha: 0.5)
             cell.lblAfstand.text = ""
         } else {

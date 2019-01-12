@@ -23,7 +23,6 @@ class registerViewController: UIViewController {
     
     @IBOutlet weak var signInButton: UIButton!
     
-    //    var isSignIn:Bool = true
     var ref: DatabaseReference!
     
     override func viewDidLoad() {
@@ -47,10 +46,7 @@ class registerViewController: UIViewController {
         //email validation
         if let email = emailInput.text, let pass = passwordInput.text{
             
-            //check if it's sign in or register
-            //register the user
             Auth.auth().createUser(withEmail: email, password: pass) { (authResult, error) in
-                // ...
                 if let user = authResult?.user {
                     self.performSegue(withIdentifier: "goToHome", sender: self)
                     let inputNaam = self.naamInput.text

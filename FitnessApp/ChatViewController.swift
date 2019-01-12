@@ -51,11 +51,8 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
         tableView.delegate = self
         tableView.dataSource = self
         
-//        let uid = Auth.auth().currentUser?.uid
-        
         let database = Database.database().reference()
         
-//        if (get_uid == uid){
             database.child("Messages").child(currentUserChatId).queryOrderedByKey().observe(.childAdded, with: {
                 snapshot in
                 
@@ -91,8 +88,6 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
     func commonInit(_ title: String, user_uid: String) {        
         name = title
         get_uid = user_uid
-        
-        print("title: \(title)")
     }
     
     func commonInit2(naam: String, achternaam: String, onderwerp: String, niveau: String, afstand: String, beschrijving: String) {
@@ -101,10 +96,6 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
         niveauVar = niveau
         afstandVar = afstand
         beschrijvingVar = beschrijving
-        
-        //        print("TAAL: \(taal)")
-        //        print("NAAM: \(naam)")
-        //        print("OND: \(onderwerp)")
     }
     
     @IBAction func sendMessage(_ sender: Any) {
@@ -123,7 +114,6 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
                     let achternaam = dict["userAchternaam"] as? String
                     let username = "\(voornaam!) \(achternaam!)"
                     let useruid = get_uid
-                    print(username)
                     
                     let database = Database.database().reference()
                     let bodyData : [String : Any] = ["uid" : uid!,
@@ -142,7 +132,6 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-//        return 65
         return 100
     }
     
