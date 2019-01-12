@@ -18,10 +18,9 @@
 		8313362D21C7973600ED399E /* FitnessAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8313362C21C7973600ED399E /* FitnessAppUITests.swift */; };
 		8313363B21C7984000ED399E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8313363A21C7984000ED399E /* GoogleService-Info.plist */; };
 		8313363D21C79BC700ED399E /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8313363C21C79BC700ED399E /* TableViewCell.swift */; };
-		8313364921C7B9F400ED399E /* DetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8313364721C7B9F400ED399E /* DetailVC.swift */; };
-		8313364A21C7B9F400ED399E /* DetailVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8313364821C7B9F400ED399E /* DetailVC.xib */; };
 		834FD22221C9044400824738 /* loginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834FD22121C9044400824738 /* loginViewController.swift */; };
 		834FD22421C90A8000824738 /* registerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834FD22321C90A8000824738 /* registerViewController.swift */; };
+		83FF9D9021E5F1BB008D2975 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83FF9D8F21E5F1BB008D2975 /* Helper.swift */; };
 		BFF74C6F1EEF31CD8A5EBECF /* Pods_FitnessAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27B00E49AAB6282EB6DAB0D4 /* Pods_FitnessAppUITests.framework */; };
 		E8100BD3232E08C08453AF55 /* Pods_FitnessAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB00906D82DC2C83864C6BB1 /* Pods_FitnessAppTests.framework */; };
 		E9AED2D492408062079269C3 /* Pods_FitnessApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7C1E2A4D4E8A59990BB46DF /* Pods_FitnessApp.framework */; };
@@ -67,10 +66,9 @@
 		8313362E21C7973600ED399E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8313363A21C7984000ED399E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		8313363C21C79BC700ED399E /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
-		8313364721C7B9F400ED399E /* DetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailVC.swift; sourceTree = "<group>"; };
-		8313364821C7B9F400ED399E /* DetailVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailVC.xib; sourceTree = "<group>"; };
 		834FD22121C9044400824738 /* loginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = loginViewController.swift; sourceTree = "<group>"; };
 		834FD22321C90A8000824738 /* registerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = registerViewController.swift; sourceTree = "<group>"; };
+		83FF9D8F21E5F1BB008D2975 /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		A4996542C84E2B3D93669BDF /* Pods-FitnessAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FitnessAppUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FitnessAppUITests/Pods-FitnessAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		AC48B16F62ADDA1AE6370EA9 /* Pods-FitnessAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FitnessAppTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FitnessAppTests/Pods-FitnessAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B7C1E2A4D4E8A59990BB46DF /* Pods_FitnessApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FitnessApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -130,7 +128,6 @@
 		8313360B21C7973400ED399E /* FitnessApp */ = {
 			isa = PBXGroup;
 			children = (
-				8313364621C7B9CE00ED399E /* DetailVC */,
 				8313360C21C7973400ED399E /* AppDelegate.swift */,
 				8313360E21C7973400ED399E /* ViewController.swift */,
 				8313363C21C79BC700ED399E /* TableViewCell.swift */,
@@ -143,6 +140,7 @@
 				8313361521C7973600ED399E /* LaunchScreen.storyboard */,
 				8313361821C7973600ED399E /* Info.plist */,
 				8313363A21C7984000ED399E /* GoogleService-Info.plist */,
+				83FF9D8F21E5F1BB008D2975 /* Helper.swift */,
 			);
 			path = FitnessApp;
 			sourceTree = "<group>";
@@ -163,15 +161,6 @@
 				8313362E21C7973600ED399E /* Info.plist */,
 			);
 			path = FitnessAppUITests;
-			sourceTree = "<group>";
-		};
-		8313364621C7B9CE00ED399E /* DetailVC */ = {
-			isa = PBXGroup;
-			children = (
-				8313364721C7B9F400ED399E /* DetailVC.swift */,
-				8313364821C7B9F400ED399E /* DetailVC.xib */,
-			);
-			path = DetailVC;
 			sourceTree = "<group>";
 		};
 		92A53787D7E2A09F616EFA81 /* Frameworks */ = {
@@ -309,7 +298,6 @@
 				8313363B21C7984000ED399E /* GoogleService-Info.plist in Resources */,
 				8313361421C7973600ED399E /* Assets.xcassets in Resources */,
 				8313361221C7973400ED399E /* Main.storyboard in Resources */,
-				8313364A21C7B9F400ED399E /* DetailVC.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -436,9 +424,9 @@
 				83080FEF21E3732D000D70B4 /* ChatViewController.swift in Sources */,
 				8313360F21C7973400ED399E /* ViewController.swift in Sources */,
 				8313363D21C79BC700ED399E /* TableViewCell.swift in Sources */,
+				83FF9D9021E5F1BB008D2975 /* Helper.swift in Sources */,
 				834FD22421C90A8000824738 /* registerViewController.swift in Sources */,
 				8313360D21C7973400ED399E /* AppDelegate.swift in Sources */,
-				8313364921C7B9F400ED399E /* DetailVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

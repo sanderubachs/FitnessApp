@@ -43,6 +43,7 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     override func viewDidLoad() {
         super.viewDidLoad()
+//        self.hideKeyboardWhenTappedAround()
         
         navigationItem.title = name
         
@@ -51,7 +52,7 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
         tableView.delegate = self
         tableView.dataSource = self
         
-        let uid = Auth.auth().currentUser?.uid
+//        let uid = Auth.auth().currentUser?.uid
         
         let database = Database.database().reference()
         

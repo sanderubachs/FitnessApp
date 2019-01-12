@@ -107,7 +107,16 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                 self.tableView.reloadData()
             }
         })
+        
+//        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
+//
+//        view.addGestureRecognizer(tap)
     }
+    
+//    func dismissKeyboard() {
+//        //keyboard function
+//        view.endEditing(true)
+//    }
     
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return naamData.count
@@ -120,12 +129,12 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! TableViewCell
-        cell.lblNaam.text = "\(naamData[indexPath.row]), \(leeftijdData[indexPath.row])"
+        cell.lblNaam.text = "\(naamData[indexPath.row]) \(achterData[indexPath.row]), \(leeftijdData[indexPath.row])"
         cell.lblNiveau.text = "Niveau: \(niveauData[indexPath.row])"
         
         let uid = Auth.auth().currentUser?.uid
         if (Auth.auth().currentUser?.uid == uidData[indexPath.row]){
-            print("hallo")
+            print("geen user ingelogd")
         } else {
             cell.lblAfstand.text = afstandData[indexPath.row]
         }

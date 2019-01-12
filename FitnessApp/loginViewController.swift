@@ -22,7 +22,13 @@ class loginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        Auth.auth().addStateDidChangeListener({
+            auth, user in
+            if user != nil {
+                Helper.helper.switchToNavigationVC()
+            }
+        })
     }
     
     @IBAction func signInButtonTapped(_ sender: Any) {
