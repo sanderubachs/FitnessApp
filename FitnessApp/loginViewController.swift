@@ -18,8 +18,6 @@ class loginViewController: UIViewController {
     
     @IBOutlet weak var signInButton: UIButton!
     
-//    var isSignIn:Bool = true
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -29,6 +27,18 @@ class loginViewController: UIViewController {
                 Helper.helper.switchToNavigationVC()
             }
         })
+        
+        self.hideKeyboardWhenTappedAround()
+    }
+    
+    func hideKeyboardWhenTappedAround() {
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(loginViewController.dismissKeyboard))
+        tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
+    }
+    
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
     }
     
     @IBAction func signInButtonTapped(_ sender: Any) {

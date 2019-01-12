@@ -12,7 +12,7 @@ import FirebaseDatabase
 import FirebaseAuth
 import FirebaseCore
 
-struct Post2 {
+struct Post {
     let bodyText: String!
     let username: String!
 }
@@ -39,11 +39,10 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
     var ref: DatabaseReference!
     var ref2: DatabaseReference!
     
-    var posts = [Post2]()
+    var posts = [Post]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        self.hideKeyboardWhenTappedAround()
         
         navigationItem.title = name
         
@@ -63,7 +62,7 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
                 let bodyText = (snapshot.value as? NSDictionary)?["bodyText"] as? String ?? ""
                 let userName = (snapshot.value as? NSDictionary)?["username"] as? String ?? ""
                 
-                self.posts.insert(Post2(bodyText: bodyText, username: userName), at: 0)
+                self.posts.insert(Post(bodyText: bodyText, username: userName), at: 0)
                 self.tableView.reloadData()
             })
             
@@ -75,6 +74,18 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
             niveauLabel.text = niveauVar
         
         [beschrijvingLabel .sizeToFit()]
+        
+        self.hideKeyboardWhenTappedAround()
+    }
+    
+    func hideKeyboardWhenTappedAround() {
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(ChatViewController.dismissKeyboard))
+        tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
+    }
+    
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
     }
     
     func commonInit(_ title: String, user_uid: String) {        

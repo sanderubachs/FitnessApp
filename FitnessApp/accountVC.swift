@@ -14,7 +14,6 @@ class accountVC: UIViewController {
     
     @IBOutlet weak var naamLabel: UILabel!
     @IBOutlet weak var niveauLabel: UILabel!
-    @IBOutlet weak var beschrijvingLabel: UILabel!
     @IBOutlet weak var beschrijvingText: UITextView!
     @IBOutlet weak var saveButton: UIButton!
     
@@ -50,13 +49,24 @@ class accountVC: UIViewController {
 //                    print("voornaam: \(voorNaam) achternaam: \(achterNaam)")
                     
                     self.naamLabel.text = "\(voorNaam!) \(achterNaam!)"
-                    self.beschrijvingLabel.text = beschrijving
+//                    self.beschrijvingLabel.text = beschrijving
                     self.niveauLabel.text = niveau
                     self.beschrijvingText.text = beschrijving
-                    [self.beschrijvingLabel .sizeToFit()]
+//                    [self.beschrijvingLabel .sizeToFit()]
                 }
             })
         }
+        self.hideKeyboardWhenTappedAround()
+    }
+    
+    func hideKeyboardWhenTappedAround() {
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(accountVC.dismissKeyboard))
+        tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
+    }
+    
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
     }
     
     @IBAction func postEdit(_ sender: Any) {
