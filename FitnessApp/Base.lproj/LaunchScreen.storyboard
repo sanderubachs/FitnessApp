@@ -18,12 +18,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Screen Shot 2019-01-12 at 14.58.52" translatesAutoresizingMaskIntoConstraints="NO" id="Srr-RQ-Kg8">
-                                <rect key="frame" x="-157" y="-2" width="669" height="669"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="gymder-icon" translatesAutoresizingMaskIntoConstraints="NO" id="Srr-RQ-Kg8">
+                                <rect key="frame" x="87" y="239" width="200" height="189"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.10196078431372549" green="0.59607843137254901" blue="0.9882352941176471" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
@@ -33,6 +33,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Screen Shot 2019-01-12 at 14.58.52" width="850" height="850"/>
+        <image name="gymder-icon" width="512" height="512"/>
     </resources>
 </document>

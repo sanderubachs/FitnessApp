@@ -90,7 +90,7 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
         get_uid = user_uid
     }
     
-    func commonInit2(naam: String, achternaam: String, onderwerp: String, niveau: String, afstand: String, beschrijving: String) {
+    func commonInitData(naam: String, achternaam: String, onderwerp: String, niveau: String, afstand: String, beschrijving: String) {
         naamVar = "\(naam) \(achternaam)"
         onderwerpVar = onderwerp
         niveauVar = niveau

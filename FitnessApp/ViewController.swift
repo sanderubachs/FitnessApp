@@ -137,7 +137,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         let vcChat = ChatViewController()
         vcChat.commonInit(users[indexPath.row].username,
                           user_uid: users[indexPath.row].uid)
-        vcChat.commonInit2(naam: naamData[indexPath.item],
+        vcChat.commonInitData(naam: naamData[indexPath.item],
                            achternaam: achterData[indexPath.item],
                            onderwerp: achterData[indexPath.item],
                            niveau: niveauData[indexPath.item],
