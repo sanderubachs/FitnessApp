@@ -89,5 +89,13 @@ class accountVC: UIViewController {
         }
         _ = navigationController?.popViewController(animated: true)
         }
+    
+    @IBAction func logOutButton(_ sender: Any) {
+        try! Auth.auth().signOut()
+        if let storyboard = self.storyboard {
+            let vc = storyboard.instantiateViewController(withIdentifier: "firstNavigationController") as! UITabBarController
+            self.present(vc, animated: false, completion: nil)
+        }
+    }
     }
 

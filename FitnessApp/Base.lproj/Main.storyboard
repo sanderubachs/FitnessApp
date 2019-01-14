@@ -73,6 +73,14 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f6q-Sb-OXl">
+                                <rect key="frame" x="106" y="579" width="162" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Uitloggen"/>
+                                <connections>
+                                    <action selector="logOutButton:" destination="VXZ-bd-8oP" eventType="touchUpInside" id="Ibj-2J-haI"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="po1-PQ-bLB"/>
@@ -389,7 +397,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="vT4-pI-4Ng">
             <objects>
-                <tabBarController id="8tX-6o-CKP" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="firstNavigationController" id="8tX-6o-CKP" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Kl0-U8-g0C">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
