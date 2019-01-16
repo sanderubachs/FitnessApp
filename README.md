@@ -41,7 +41,7 @@ Verder had ik zelf nog het idee om een online advertentie te maken. Ik zat na te
 
 
 ## DED
-Voor DED heb ik uiteraard gewerkt aan het daadwerkelijk maken van deze app.
+Voor DED heb ik uiteraard gewerkt aan het daadwerkelijk maken van deze app. De code die ik geschreven hebt is te vinden in het mapje 'FitnessApp'
 
-* [GitHub](https://github.com/sanderubachs/FitnessApp) - git repositorie van het project (deze GitHub)
+* [GitHub](https://github.com/sanderubachs/FitnessApp/tree/master/FitnessApp) - git repositorie van het project (deze GitHub)
 * [Documentatie](https://drive.google.com/file/d/11GTYb9KtmdojpDKlrHmdmxEl95zuPJ7J/view?usp=sharing) - documentie + taakverdeling + code snippets van het project
