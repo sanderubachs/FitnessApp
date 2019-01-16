@@ -7,6 +7,7 @@ Gymder is een mobiele iOS app waar gemotiveerde sporters een fitbuddy kunnen vin
 Voor de vrije projecten heb ik er voor gekozen om een iOS app te gaan maken. Dit is iets waar ik lichte ervaring in heb en graag meer over wil leren.
 
 ### Drive mapjes
+* [Drive rootmap](https://drive.google.com/open?id=1RTAGXrEjuZU_H9_iMZcO0M-Q0oMwoFbX) - de hoofdmap van de drive met daarin alle andere mapjes
 
 * [SCO](https://drive.google.com/drive/u/0/folders/1MjmGDANs87l_slVQY54KjsjEITi1E7Hc) - drive map
 * [UXU](https://drive.google.com/drive/u/0/folders/1YZ6I0MAkrOfNF1qJOoWFM7RirgIGm7ga) - drive map
