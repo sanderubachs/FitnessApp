@@ -8,6 +8,6 @@ Voor de vrije projecten heb ik er voor gekozen om een iOS app te gaan maken. Dit
 
 ### Drive mapjes
 
-* [SCO] (https://drive.google.com/drive/u/0/folders/1MjmGDANs87l_slVQY54KjsjEITi1E7Hc) - drive map
-* [UXU] (https://drive.google.com/drive/u/0/folders/1YZ6I0MAkrOfNF1qJOoWFM7RirgIGm7ga) - drive map
-* [DED] (https://drive.google.com/drive/u/0/folders/1pLX0bA6ZZYhOGKNlN17kg4xXlS7NSMqd) - drive map
+* [SCO](https://drive.google.com/drive/u/0/folders/1MjmGDANs87l_slVQY54KjsjEITi1E7Hc) - drive map
+* [UXU](https://drive.google.com/drive/u/0/folders/1YZ6I0MAkrOfNF1qJOoWFM7RirgIGm7ga) - drive map
+* [DED](https://drive.google.com/drive/u/0/folders/1pLX0bA6ZZYhOGKNlN17kg4xXlS7NSMqd) - drive map
