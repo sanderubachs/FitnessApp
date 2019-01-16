@@ -4,7 +4,9 @@ Gymder is een mobiele iOS app waar gemotiveerde sporters een fitbuddy kunnen vin
 
 ## Inleiding
 
-Voor de vrije projecten heb ik er voor gekozen om een iOS app te gaan maken. Dit is iets waar ik lichte ervaring in heb en graag meer over wil leren.
+Voor de vrije projecten heb ik er voor gekozen om een iOS app te gaan maken. Dit is iets waar ik lichte ervaring in heb en graag meer over wil leren. 
+
+!! In deze README staan alleen linkjes naar producten die ik met de vrije projecten heb gemaakt. Dit is dus niet mijn portfolio !!
 
 ### Drive mapjes
 * [Drive rootmap](https://drive.google.com/open?id=1RTAGXrEjuZU_H9_iMZcO0M-Q0oMwoFbX) - de hoofdmap van de drive met daarin alle andere mapjes
@@ -14,7 +16,8 @@ Voor de vrije projecten heb ik er voor gekozen om een iOS app te gaan maken. Dit
 * [DED](https://drive.google.com/drive/u/0/folders/1pLX0bA6ZZYhOGKNlN17kg4xXlS7NSMqd) - drive map
 
 ### Zelf assesment
-* [Zelf assesment Sander Ubachs]()
+* [Zelf assesment Sander Ubachs]() - hier zie je wat ik denk te halen voor de leerdoelen
+* [Portfolio semester 3]() - hier toon ik alle leerdoelen aan
 
 
 ## SCO
