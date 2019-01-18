@@ -16,8 +16,8 @@ Voor de vrije projecten heb ik er voor gekozen om een iOS app te gaan maken. Dit
 * [DED](https://drive.google.com/drive/u/0/folders/1pLX0bA6ZZYhOGKNlN17kg4xXlS7NSMqd) - drive map
 
 ### Zelf assesment
-* [Zelf assesment Sander Ubachs]() - hier zie je wat ik denk te halen voor de leerdoelen
-* [Portfolio semester 3]() - hier toon ik alle leerdoelen aan
+* [Zelf assesment Sander Ubachs](https://drive.google.com/file/d/11k6VoSJNquQvy1gOVRE0N1wpR0wwG6bZ/view?usp=sharing) - hier zie je wat ik denk te halen voor de leerdoelen
+* [Portfolio semester 3](https://drive.google.com/file/d/1rBqP-asShfV1Ch0wCbvpYEHVIQMgrOHm/view?usp=sharing) - hier toon ik alle leerdoelen aan
 
 
 ## SCO
@@ -26,7 +26,7 @@ Voor SCO heb ik gekozen om me te focussen op het maken van designs. Ik wil onder
 Daarom leek het mij interressant om hier onderzoek naar te doen en kijken hoe ik een goed loginscherm kan designen voor mijn eigen app.
 
 * [Designs](https://drive.google.com/open?id=1hf3m11LyAX6E-VzgxzVnBhiuMnBjM5YI) - alle verschillende designs die ik heb ontworpen
-* [Documentatie]() - het onderzoek dat ik heb gedaan naar verschillende loginschermen
+* [Documentatie](https://drive.google.com/file/d/1MnVlqu21psKKwHc1ybm9aBAMqclODmzM/view?usp=sharing) - het onderzoek dat ik heb gedaan naar verschillende loginschermen
 
 ## UXU
 Voor UXU wilde ik me in de vrije projecten richten op storytelling. Dit is een leerdoel dat ik nog moest aantonen en heb daarom besloten om een video te maken samen met Jeroen. Dit is een video om te gebruiker te overtuigen van ons product. Voor onze app is het namelijk van belang dat er mensen gebruik van maken. Als niemand gebruik maakt van de app, wil niemand het ook gaan gebruiken. Daarom is het belangrijk om veel gebruikers te krijgen.
