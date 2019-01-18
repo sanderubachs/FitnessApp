@@ -17,7 +17,7 @@ Voor de vrije projecten heb ik er voor gekozen om een iOS app te gaan maken. Dit
 
 ### Zelf assesment
 * [Zelf assesment Sander Ubachs](https://drive.google.com/file/d/11k6VoSJNquQvy1gOVRE0N1wpR0wwG6bZ/view?usp=sharing) - hier zie je wat ik denk te halen voor de leerdoelen
-* [Portfolio semester 3](https://drive.google.com/file/d/1rBqP-asShfV1Ch0wCbvpYEHVIQMgrOHm/view?usp=sharing) - hier toon ik alle leerdoelen aan
+* [Leeswijzer semester 3](https://drive.google.com/file/d/1rBqP-asShfV1Ch0wCbvpYEHVIQMgrOHm/view?usp=sharing) - hier toon ik alle leerdoelen aan
 
 
 ## SCO
