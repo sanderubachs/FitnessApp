@@ -15,15 +15,15 @@ Voor de vrije projecten heb ik er voor gekozen om een iOS app te gaan maken. Dit
 * [UXU](https://drive.google.com/drive/u/0/folders/1YZ6I0MAkrOfNF1qJOoWFM7RirgIGm7ga) - drive map
 * [DED](https://drive.google.com/drive/u/0/folders/1pLX0bA6ZZYhOGKNlN17kg4xXlS7NSMqd) - drive map
 
-### Zelf assesment
-* [Zelf assesment Sander Ubachs](https://drive.google.com/file/d/11k6VoSJNquQvy1gOVRE0N1wpR0wwG6bZ/view?usp=sharing) - hier zie je wat ik denk te halen voor de leerdoelen
+### Zelf assessment
+* [Zelf assessment Sander Ubachs](https://drive.google.com/file/d/11k6VoSJNquQvy1gOVRE0N1wpR0wwG6bZ/view?usp=sharing) - hier zie je wat ik denk te halen voor de leerdoelen
 * [Leeswijzer semester 3](https://drive.google.com/file/d/1rBqP-asShfV1Ch0wCbvpYEHVIQMgrOHm/view?usp=sharing) - hier toon ik alle leerdoelen aan
 
 
 ## SCO
 Voor SCO heb ik gekozen om me te focussen op het maken van designs. Ik wil onderzoek gaan doen naar verschillende manieren van inlogschermen. Tijdens het designen van het loginscherm van mijn prototype voor de app kwam ik erachter op hoe veel verschillende manieren loginschermen kunnen worden gedesigned, maar ook op hoe veel verschillende manieren het loginscherm kan werken.
 
-Daarom leek het mij interressant om hier onderzoek naar te doen en kijken hoe ik een goed loginscherm kan designen voor mijn eigen app.
+Daarom leek het mij interessant om hier onderzoek naar te doen en kijken hoe ik een goed loginscherm kan designen voor mijn eigen app.
 
 * [Designs](https://drive.google.com/open?id=1hf3m11LyAX6E-VzgxzVnBhiuMnBjM5YI) - alle verschillende designs die ik heb ontworpen
 * [Documentatie](https://drive.google.com/file/d/1MnVlqu21psKKwHc1ybm9aBAMqclODmzM/view?usp=sharing) - het onderzoek dat ik heb gedaan naar verschillende loginschermen
@@ -40,7 +40,7 @@ Verder had ik zelf nog het idee om een online advertentie te maken. Ik zat na te
 * [online-advertentie (v1)](https://drive.google.com/file/d/1YKceiVeqZ8AcGqIqAf1k_o4uPLSo1N_L/view?usp=sharing) - eerste versie van de banner
 * [online-advertentie (v2)](https://drive.google.com/file/d/1LhtDQYYpobIwsfijjbJW4RnHhbgDWRtb/view?usp=sharing) - banner aangepast op gekregen feedback
 
-* [documentie](https://drive.google.com/file/d/1mhcfKklmfE20VvIXfj9zZ4UxgQ2ajnND/view?usp=sharing) - documentatie en onderzoek naar YouTube advertenties
+* [documentatie](https://drive.google.com/file/d/1mhcfKklmfE20VvIXfj9zZ4UxgQ2ajnND/view?usp=sharing) - documentatie en onderzoek naar YouTube advertenties
 
 
 ## DED
